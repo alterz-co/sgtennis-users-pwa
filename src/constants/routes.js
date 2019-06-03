@@ -8,3 +8,7 @@ export const PROFILE = '/profile';
 export const PROFILE_EDIT = '/profile/:id';
 export const USER_TOURNAMENT_ADD = '/usertournament/add';
 export const USER_TOURNAMENT_EDIT = '/usertournament/edit/:id';
+export const PLAYERS_MALE = '/players/male';
+export const PLAYERS_FEMALE = '/players/female';
+export const PLAYER_DETAILS_MALE = '/player/male/:id';
+export const PLAYER_DETAILS_FEMALE = '/player/female/:id';

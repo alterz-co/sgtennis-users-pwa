@@ -28,7 +28,7 @@ const NavAuth = props => (
             <a href={ROUTES.HOME} className="black-text">Tournaments</a>
           </li>
           <li>
-            <a href='' className="black-text">Players</a>
+            <a href={ROUTES.PLAYERS_MALE} className="black-text">Players</a>
           </li>
           <li>
             <a href={ROUTES.PROFILE} className="black-text">
@@ -63,7 +63,7 @@ const NavAuth = props => (
     <div className="nav-content grey">
       <ul className="tabs tabs-transparent hide-on-med-and-up">
         <li className="tab"><a href={ROUTES.HOME}>Tournaments</a></li>
-        <li className="tab"><a href=''>Players</a></li>
+        <li className="tab"><a href={ROUTES.PLAYERS_MALE}>Players</a></li>
       </ul>
     </div>
   </nav>
