@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import HomeNav from '../navigation/HomeNav';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -79,6 +80,7 @@ class Terms extends Component {
             <h3>That's it <span role="img" aria-label="bye">👋</span></h3>
             <h3>Yours, Alterz</h3>
           </div>
+          <HomeNav/>
         </div>
       </div>
     )

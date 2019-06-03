@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/navigation/Navbar';
 import Landing from './components/landing/Landing';
 import Terms from './components/landing/Terms';
 import Register from './components/auth/Register';
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
+          <Navbar/>
           <div style={{ marginTop: 40, paddingBottom: 200 }}>
             <Switch>
               <Route exact path={ROUTES.LANDING} component={Landing} />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logo from '../../logo.svg';
+import Footer from '../navigation/Footer';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -23,6 +24,7 @@ class Landing extends Component {
             Login
           </a>
         </div>
+        <Footer/>
       </div>
     )
   }

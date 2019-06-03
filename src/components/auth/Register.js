@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { register } from '../../redux/actions/authActions';
+import HomeNav from '../navigation/HomeNav';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -131,6 +132,7 @@ class Register extends Component {
                 <a href={ROUTES.LOGIN} className="grey-text">Login</a>
               </p>
             </form>
+            <HomeNav/>
           </div>
         </div>
       </section>
