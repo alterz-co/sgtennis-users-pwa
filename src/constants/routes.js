@@ -5,3 +5,6 @@ export const LOGIN = '/login';
 export const PASSWORD_RESET = '/password-reset';
 export const HOME = '/home';
 export const PROFILE = '/profile';
+export const PROFILE_EDIT = '/profile/:id';
+export const USER_TOURNAMENT_ADD = '/usertournament/add';
+export const USER_TOURNAMENT_EDIT = '/usertournament/edit/:id';
