@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../../redux/actions/authActions';
+import HomeNav from '../navigation/HomeNav';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -95,6 +96,7 @@ class Login extends Component {
                 <a href={ROUTES.PASSWORD_RESET} className="grey-text">Reset Password</a>
               </p>
             </form>
+            <HomeNav/>
           </div>
         </div>
       </section>
