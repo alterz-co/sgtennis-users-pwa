@@ -17,3 +17,4 @@ export const TOURNAMENT_UPDATES = '/tournament/:id/updates';
 export const TOURNAMENT_RESULTS = '/tournament/:id/results';
 export const TOURNAMENT_SCHEDULE = '/tournament/:id/schedule';
 export const TOURNAMENT_ABOUT = '/tournament/:id/about';
+export const ANNOUNCEMENTS = '/announcements';
