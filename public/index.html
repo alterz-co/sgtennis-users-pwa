@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <!-- Tell the browser it's a PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Tell iOS it's a PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -17,12 +21,31 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <title>Alterz</title>
+    <!-- Add in style for the filler HTML -->
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .page-info {
+        margin-top: 40px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <!-- Filler HTML as the app starts up -->
+    <div id="root">
+      <p class="page-info">
+        <span role="img" aria-label="tennis-ball" style={{ paddingRight: 20 }}>🎾</span>
+        Loading....
+      </p>
+    </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
