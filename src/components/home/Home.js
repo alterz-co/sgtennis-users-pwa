@@ -4,6 +4,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import TournamentList from '../tournaments/TournamentList';
+import Announcement from '../announcements/Announcement';
 import Footer from '../navigation/Footer';
 
 import * as ROUTES from '../../constants/routes';
@@ -17,6 +18,7 @@ class Home extends Component {
 
     return(
       <div className="container">
+        <Announcement announcements={this.props.announcements}/>
         <div className="row">
           <div className="col s12 l12">
             <p style={{ fontSize: 20, fontWeight: 'bold' }}>
@@ -35,13 +37,15 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
-    tournaments: state.firestore.ordered.tournaments
+    tournaments: state.firestore.ordered.tournaments,
+    announcements: state.firestore.ordered.announcements
   }
 }
 
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: 'tournaments', orderBy: ['startDate', 'desc' ]}
+    { collection: 'tournaments', orderBy: ['startDate', 'desc' ]},
+    { collection: 'announcements', orderBy: ['createdAt', 'desc'] }
   ])
 )(Home);

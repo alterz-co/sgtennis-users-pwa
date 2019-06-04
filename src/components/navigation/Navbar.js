@@ -36,7 +36,7 @@ const NavAuth = props => (
             </a>
           </li>
           <li>
-            <a href=''>
+            <a href={ROUTES.ANNOUNCEMENTS}>
               <i className="material-icons black-text">notifications</i>
             </a>
           </li>
@@ -48,7 +48,7 @@ const NavAuth = props => (
             </a>
           </li>
           <li>
-            <a href=''>
+            <a href={ROUTES.ANNOUNCEMENTS}>
               <i className="material-icons black-text">notifications</i>
             </a>
           </li>
