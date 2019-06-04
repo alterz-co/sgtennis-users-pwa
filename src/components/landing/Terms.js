@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
 import HomeNav from '../navigation/HomeNav';
-
-import * as ROUTES from '../../constants/routes';
 
 class Terms extends Component {
   render(){
-    if(this.props.auth.uid){
-      return <Redirect to={ROUTES.HOME}/>
-    }
-
     return(
       <div className="container">
         <div className="row">
@@ -87,10 +79,4 @@ class Terms extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    auth: state.firebase.auth
-  }
-}
-
-export default connect(mapStateToProps)(Terms);
+export default Terms;
