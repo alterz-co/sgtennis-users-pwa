@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import moment from 'moment';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import LoaderComponent from '../../LoaderComponent';
-import TournamentUpdatesAdd from './TournamentUpdatesAdd';
 
 import * as ROUTES from '../../../constants/routes';
 
@@ -25,7 +23,6 @@ class TournamentUpdates extends Component {
     return(
       <div style={{ marginTop: 20 }}>
         <p className="center-align" style={{ fontWeight: 'bold' }}>Updates</p>
-        <TournamentUpdatesAdd tournamentId={tournamentId}/>
         <div className="row">
         {
           updates && updates.map(update => {
@@ -34,7 +31,7 @@ class TournamentUpdates extends Component {
                 <div className="card">
                   <div className="card-content">
                     <p style={{ fontWeight: 'bold' }}>{update.name}</p>
-                    <p className="grey-text">{moment(update.createdAt.toDate()).calendar()}</p>
+                    <p className="grey-text">{update.createdAt}</p>
                     <div
                       style={{ marginTop: 20, marginBottom: 50 }}
                       dangerouslySetInnerHTML={{ __html: update.body }}
