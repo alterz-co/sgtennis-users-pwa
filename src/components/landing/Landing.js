@@ -3,10 +3,16 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logo from '../../logo.svg';
 import Footer from '../navigation/Footer';
+import ReactGA from 'react-ga';
 
 import * as ROUTES from '../../constants/routes';
 
 class Landing extends Component {
+
+  componentDidMount(){
+    ReactGA.initialize('UA-142471653-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   render(){
     if(this.props.auth.uid){

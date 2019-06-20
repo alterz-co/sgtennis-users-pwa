@@ -5,10 +5,16 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import LoaderComponent from '../../LoaderComponent';
 import PlayersHeader from '../PlayersHeader';
+import ReactGA from 'react-ga';
 
 import * as ROUTES from '../../../constants/routes';
 
 class PlayersMale extends Component {
+
+  componentDidMount(){
+    ReactGA.initialize('UA-142471653-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   render(){
     const { auth, male } = this.props;
