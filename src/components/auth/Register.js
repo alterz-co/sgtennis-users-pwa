@@ -3,10 +3,16 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { register } from '../../redux/actions/authActions';
 import HomeNav from '../navigation/HomeNav';
+import ReactGA from 'react-ga';
 
 import * as ROUTES from '../../constants/routes';
 
 class Register extends Component {
+
+  componentDidMount(){
+    ReactGA.initialize('UA-140951612-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   state = {
     name: '',

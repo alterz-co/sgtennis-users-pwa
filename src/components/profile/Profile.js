@@ -3,10 +3,16 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../redux/actions/authActions';
 import UserTournaments from './tournaments/UserTournaments';
+import ReactGA from 'react-ga';
 
 import * as ROUTES from '../../constants/routes';
 
 class Profile extends Component {
+
+  componentDidMount(){
+    ReactGA.initialize('UA-142471653-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   render(){
     const { auth, profile } = this.props;

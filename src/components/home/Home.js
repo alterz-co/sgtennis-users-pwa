@@ -6,10 +6,16 @@ import { firestoreConnect } from 'react-redux-firebase';
 import TournamentList from '../tournaments/TournamentList';
 import Announcement from '../announcements/Announcement';
 import Footer from '../navigation/Footer';
+import ReactGA from 'react-ga';
 
 import * as ROUTES from '../../constants/routes';
 
 class Home extends Component {
+
+  componentDidMount(){
+    ReactGA.initialize('UA-142471653-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   render(){
     if(!this.props.auth.uid){
