@@ -70,9 +70,13 @@ class Register extends Component {
               This website is currently in beta mode: this means that it is not very stable at the moment.
               There may be crashes, data loss and speed/performance issues.
             </p>
+            <p><span style={{ fontWeight: 'bold' }}>Disclaimer</span>: The information on this website is for informational purposes only, which may be incomplete or outdated.
+            All information on this site is presented without any representation, guaranty, or warranty whatsoever regarding the accuracy,
+            relevance or completeness of the information. Please note that users of this website are responsible for independently verifying
+            any and all information.</p>
             {this.state.error && <p className="red-text">{this.state.error}</p>}
             {this.props.authError && <p className="red-text">{this.props.authError}</p>}
-            <form onSubmit={this.onSubmit}>
+            <form style={{ marginTop: 40 }} onSubmit={this.onSubmit}>
               <div className="input-field">
                 <i className="material-icons prefix">account_circle</i>
                 <input
