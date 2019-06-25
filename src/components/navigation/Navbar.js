@@ -52,11 +52,6 @@ const NavAuth = props => (
               <i className="material-icons black-text">notifications</i>
             </a>
           </li>
-          <li>
-            <a href="https://docs.google.com/forms/d/1231sadKrwZr91zSHIDoqralwniJGZ21fYYUQcvR3xpM/prefill">
-              <i className="material-icons black-text">report</i>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
