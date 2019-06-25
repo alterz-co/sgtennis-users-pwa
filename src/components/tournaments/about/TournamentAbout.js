@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { Segment } from 'semantic-ui-react';
 import LoaderComponent from '../../LoaderComponent';
 import { connect } from 'react-redux';
 import ReactGA from 'react-ga';
@@ -27,11 +28,13 @@ class TournamentAbout extends Component {
     return(
       <div style={{ marginTop: 20 }}>
         <p className="center-align" style={{ fontWeight: 'bold' }}>About</p>
-        <div
-          style={{ marginTop: 20, marginBottom: 50 }}
-          dangerouslySetInnerHTML={{ __html: tournament.description }}
-        >
-        </div>
+        <Segment>
+          <div
+            style={{ marginTop: 20, marginBottom: 50 }}
+            dangerouslySetInnerHTML={{ __html: tournament.description }}
+          >
+          </div>
+        </Segment>
       </div>
     )
   }

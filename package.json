@@ -18,7 +18,9 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.5",
     "redux-firestore": "^0.5.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.3.3",
+    "semantic-ui-react": "^0.82.1"
   },
   "scripts": {
     "start": "react-scripts start",
