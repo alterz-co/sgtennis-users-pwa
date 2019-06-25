@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { Segment } from 'semantic-ui-react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
@@ -33,16 +34,14 @@ class TournamentSchedule extends Component {
         {
           schedule && schedule.map(schedule => {
             return schedule.tournamentId === tournamentId && (
-              <div className="col s12 l12" key={schedule.id}>
-                <div className="card">
-                  <div className="card-content">
-                    <div
-                      style={{ marginTop: 20, marginBottom: 50 }}
-                      dangerouslySetInnerHTML={{ __html: schedule.description }}
-                    >
-                    </div>
+              <div key={schedule.id} style={{ marginTop: 50 }}>
+                <Segment>
+                  <div
+                    style={{ marginTop: 20, marginBottom: 50 }}
+                    dangerouslySetInnerHTML={{ __html: schedule.description }}
+                  >
                   </div>
-                </div>
+                </Segment>
               </div>
             )
           })
