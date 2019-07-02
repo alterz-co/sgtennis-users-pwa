@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import LoaderComponent from '../../LoaderComponent';
 import ReactGA from 'react-ga';
+import _ from 'lodash';
+import moment from 'moment';
 
 import * as ROUTES from '../../../constants/routes';
 
@@ -26,12 +28,16 @@ class TournamentUpdates extends Component {
       return <LoaderComponent/>
     }
 
+    const updatesCreatedAt = _.orderBy(updates, function(o) {
+      return new moment(o.createdAt).format('YYYYMMDD');
+    }, ['desc']);
+
     return(
       <div style={{ marginTop: 20 }}>
         <p className="center-align" style={{ fontWeight: 'bold' }}>Updates</p>
         <div className="row">
         {
-          updates && updates.map(update => {
+          updatesCreatedAt && updatesCreatedAt.map(update => {
             return update.tournamentId === tournamentId && (
               <div className="col s12 l12" key={update.id}>
                 <div className="card">
